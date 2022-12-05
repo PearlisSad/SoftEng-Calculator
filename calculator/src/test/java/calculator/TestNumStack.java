@@ -26,5 +26,14 @@ class TestNumStack {
     ns.pop();
     assertEquals(ns.isEmpty(),true,"Testing that pop() method removes last entry in stack");
   }
+  
+  @Test
+  void testEmptyStackException() {
+    
+    ns.push(5.0f);
+    ns.push(6.0f);
+    assertEquals(ns.pop(),6.0f,"Testing if pop() methods returns the last entry in stack ");
+    
+  }
 
 }

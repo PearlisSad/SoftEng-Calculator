@@ -1,5 +1,7 @@
 package calculator;
 
+import java.util.EmptyStackException;
+
 public class NumStack {
   Stack stack = new Stack();
 
@@ -18,9 +20,11 @@ public class NumStack {
     
   }
 
-  public void pop() {
+  public float pop() throws EmptyStackException{
     // TODO Auto-generated method stub
-    stack.pop();
+    
+    Entry floatval = stack.pop();
+    return floatval.getFloat();
   }
 
 }
