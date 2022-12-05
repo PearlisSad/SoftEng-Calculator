@@ -18,4 +18,9 @@ public class NumStack {
     
   }
 
+  public void pop() {
+    // TODO Auto-generated method stub
+    stack.pop();
+  }
+
 }
