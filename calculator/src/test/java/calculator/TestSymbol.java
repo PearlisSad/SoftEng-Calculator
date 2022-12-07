@@ -13,23 +13,22 @@ import org.junit.jupiter.api.Test;
 public class TestSymbol {
 
   /**
-   * Checks if the Symbol enumerator objects are being created. The test allows for the creation of
-   * the Symbol objects *,/,+,-,N,(,).
+   * The test checks for the creation of the Symbol objects  +,-,N,/,*,(,).
    */
   @Test
   public void test() { // TEST 1 - Constructor
-    assertNotNull("TIMES could not be created", Symbol.TIMES);
-    assertNotNull("DIVIDE could not be created", Symbol.DIVIDE);
     assertNotNull("PLUS could not be created", Symbol.PLUS);
     assertNotNull("MINUS could not be created", Symbol.MINUS);
     assertNotNull("INVALID could not be created", Symbol.INVALID);
+    assertNotNull("DIVIDE could not be created", Symbol.DIVIDE);
+    assertNotNull("TIMES could not be created", Symbol.TIMES);
     assertNotNull("LEFT_BRACKET could not be created", Symbol.LEFT_BRACKET);
     assertNotNull("RIGHT_BRACKET could not be created", Symbol.RIGHT_BRACKET);
+    assertNotNull("INVALID could not be created", Symbol.INVALID);
   }
 
   /**
-   * Checks if the toString() method creates matching strings to the Symbol enumerator object. The
-   * test allows for the creation of a getter and a toString() method to pass through.
+   * The test checks the creation of a getter and a working toString() method.
    */
   @Test
   public void testValues() { // TEST 2 - toString() and getSymbol()
