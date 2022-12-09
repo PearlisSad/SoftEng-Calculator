@@ -7,17 +7,17 @@ import org.junit.jupiter.api.Test;
 /**
  * TDD for Type.java
  * 
- * @author zhac221
+ * @author zkac118
  *
  */
 public class TestType {
 
   /**
-   * Checks if the Type enumerator objects are being created. The test allows for the creation of
-   * the Type objects SYMBOL,NUMBER,INVALID,STRING.
+   * Checks if the Type enumerator objects are being created.
+   * 
    */
   @Test
-  public void test() { // TEST 3 - Constructor
+  public void test() { // TEST 1 - Constructor
     assertNotNull("Type.SYMBOL could not be created", Type.SYMBOL);
     assertNotNull("Type.NUMBER could not be created", Type.NUMBER);
     assertNotNull("Type.INVALID could not be created", Type.INVALID);
@@ -25,11 +25,10 @@ public class TestType {
   }
 
   /**
-   * Checks if the toString() method creates matching strings to the Type enumerator object. The
-   * test allows for the creation of a getter and a toString() method to pass through.
+   * Checks if the toString() method creates matching strings to the Type enumerator object.
    */
   @Test
-  public void testString() { // TEST 4 - toString(), getType()
+  public void testString() { // TEST 2 - toString(), getType()
     assertEquals("String value 'SYMBOL' incorrect by toString", "SYMBOL", Type.SYMBOL.toString());
     assertEquals("String value 'NUMBER' incorrect by toString", "NUMBER", Type.NUMBER.toString());
     assertEquals("String value 'INVALID' incorrect by toString", "INVALID",
