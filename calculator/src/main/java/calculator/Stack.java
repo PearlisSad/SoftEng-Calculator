@@ -10,7 +10,7 @@ import java.util.List;
  *
  */
 public class Stack {
-  private int size = 0;
+  private int size;
   List<Entry> entries = new ArrayList<>();
 
   /**

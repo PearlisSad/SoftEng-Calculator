@@ -14,9 +14,22 @@ class TestOpStack {
   private void setup() {
     test = new OpStack();
   }
+
+  /**
+   * A Symbol object is pushed into the stack, checks if the stack is empty after pushing a symbol.
+   */
   @Test
   void PushTest() {// TEST 1 - Pushing a symbol.
     test.push(Symbol.PLUS);
-    assertEquals(test.isEmpty(),false,"IsEmpty() returned false when stack should not be empty");
+    assertEquals(test.isEmpty(), false, "isEmpty() returned true when stack should not be empty");
+  }
+  
+  @Test
+  void PopTest() {//TEST 2 - Popping a value
+    test.push(Symbol.PLUS);
+    test.pop();
+    assertEquals(test.isEmpty(),true, "isEmpty() returned false when stack should be empty");
   }
 }
+
+  
