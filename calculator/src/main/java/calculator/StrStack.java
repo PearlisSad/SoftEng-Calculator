@@ -1,5 +1,7 @@
 package calculator;
 
+import java.util.EmptyStackException;
+
 public class StrStack {
   Stack stack;
 
@@ -14,6 +16,11 @@ public class StrStack {
 
   public boolean isEmpty() {
     return stack.isEmpty();
+  }
+  
+  public String pop() throws EmptyStackException{    
+    Entry stringval = stack.pop();
+    return stringval.getString();
   }
 
 }

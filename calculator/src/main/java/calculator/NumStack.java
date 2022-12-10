@@ -15,14 +15,10 @@ public class NumStack {
   }
 
   public Boolean isEmpty() {
-    // TODO Auto-generated method stub
-    return stack.isEmpty();
-    
+    return stack.isEmpty(); 
   }
 
-  public float pop() throws EmptyStackException{
-    // TODO Auto-generated method stub
-    
+  public float pop() throws EmptyStackException{    
     Entry floatval = stack.pop();
     return floatval.getFloat();
   }

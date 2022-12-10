@@ -15,9 +15,15 @@ class TestStrStack {
     test = new StrStack();
   }
   @Test
-  void PopTest() {
+  void PushTest() {// TEST 1 - Pushing a string object
     test.push("Testing 123");
     assertEquals(test.isEmpty(), false, "isEmpty() returns true when stack is not empty");
   }
-
+  
+  @Test
+  void PopTest() {// TEST 2 - Popping a string object
+    test.push("Testing 456");
+    test.push("Testing 789");
+    assertEquals(test.pop(),"Testing 789","pop() method does not return correct value");
+  }
 }
