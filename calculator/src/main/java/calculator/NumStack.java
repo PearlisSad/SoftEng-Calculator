@@ -20,8 +20,7 @@ public class NumStack {
   
   /**
    * Uses the push() method from Stack class to add a float value to the stack.
-   * 
-   * @param f 
+   * @param f pushes a float value into the stack as an Entry object.
    */
   public void push(float f) {
     Entry ent = new Entry(f);
@@ -30,7 +29,6 @@ public class NumStack {
 
   /**
    * Uses the isEmpty() method from the Stack class to check if the stack is empty
-   * 
    * @return boolean true if the stack is empty, if not then it will return false
    */
   public Boolean isEmpty() {
@@ -39,9 +37,7 @@ public class NumStack {
 
   /**
    * The last value on the stack is removed and is returned using the getFloat() method from the Entry class.
-   * 
    * @return The Entry object at the last place in the stack.
-   * 
    * @throws EmptyStackException if the size of the stack is empty then the pop() method cannot be used.
    */
   public float pop() throws EmptyStackException {

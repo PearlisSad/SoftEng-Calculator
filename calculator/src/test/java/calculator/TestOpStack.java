@@ -9,6 +9,7 @@ class TestOpStack {
 
   /**
    * A OpStack object is created to use for tests.
+   * 
    */
   @BeforeEach
   private void setup() {
@@ -17,6 +18,7 @@ class TestOpStack {
 
   /**
    * A Symbol object is pushed into the stack, checks if the stack is empty after pushing a symbol.
+   * 
    */
   @Test
   void PushTest() {// TEST 1 - Pushing a symbol.
