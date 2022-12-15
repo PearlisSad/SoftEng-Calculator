@@ -15,11 +15,10 @@ import static org.junit.Assert.assertTrue;
 public class TestStack {
 
   /**
-   * Creates a Stack object and checks if size is set to 2. The test allows for the creation of a
-   * stack constructor and checks if it works with setSize().
+   * Checks the constructor and checks if setSize() method returns correct value.
    */
   @Test
-  public void sizeTest() { // TEST 18 - Stack constructor, setSize(), getSize().
+  public void sizeTest() { // TEST 1 - Stack constructor, setSize(), getSize().
     Stack test = new Stack();
     test.setSize(2);
     assertEquals("setSize() method was not able to set the value of size to 2", 2, test.getSize());
@@ -30,7 +29,7 @@ public class TestStack {
    * creation of a isEmpty method() for empty stack testing.
    */
   @Test
-  public void emptyTest() { // TEST 19 - Empty stack check.
+  public void emptyTest() { // TEST 2 - Empty stack check.
     Stack test = new Stack();
     assertTrue("isEmpty() method did not return true for an empty stack", test.isEmpty());
   }
@@ -40,7 +39,7 @@ public class TestStack {
    * test allows for the creation of a push() function which loads up a stack.
    */
   @Test
-  public void pushTest() { // TEST 20 - Pushing a value test.
+  public void pushTest() { // TEST 3 - Pushing a value test.
     Stack test = new Stack();
     test.push(new Entry(56.25f));
     assertFalse("isEmpty() method did not return false for a non-empty stack", test.isEmpty());
@@ -49,9 +48,11 @@ public class TestStack {
   /**
    * Creates a Stack object and checks if the Stack items can be removed after being pushed. The
    * test uses isEmpty to check whether pushing then popping leaves the stack empty.
+   * 
+   * Checks
    */
   @Test
-  public void popTest() { // TEST 21 - Removing a value test.
+  public void popTest() { // TEST 4 - Removing a value test.
     Stack test = new Stack();
     test.push(new Entry(42.74f));
     test.pop();
@@ -63,7 +64,7 @@ public class TestStack {
    * pushes a value and then checks if the popped value is the same as the entered value.
    */
   @Test
-  public void floatPopTest() { // TEST 22 - Popping a Float test.
+  public void floatPopTest() { // TEST 5 - Popping a Float test.
     Stack test = new Stack();
     test.push(new Entry(56.25f));
     test.push(new Entry(42.43f));
@@ -76,7 +77,7 @@ public class TestStack {
    * pushes a value and then checks if the popped value is the same as the entered value.
    */
   @Test
-  public void symbolPopTest() { // TEST 23 - Popping a Symbol test.
+  public void symbolPopTest() { // TEST 6 - Popping a Symbol test.
     Stack test = new Stack();
     test.push(new Entry(Symbol.TIMES));
     Entry symbolPop = test.pop();
@@ -88,7 +89,7 @@ public class TestStack {
    * pushes a value and then checks if the popped value is the same as the entered value.
    */
   @Test
-  public void stringPopTest() { // TEST 24 - Popping a String test.
+  public void stringPopTest() { // TEST 7 - Popping a String test.
     Stack test = new Stack();
     test.push(new Entry("string"));
     Entry stringPop = test.pop();
@@ -100,7 +101,7 @@ public class TestStack {
    * a value and then checks if the popped value is the same as the entered value.
    */
   @Test
-  public void typePopTest() { // TEST 25 - Popping Type test.
+  public void typePopTest() { // TEST 8 - Popping Type test.
     Stack test = new Stack();
     test.push(new Entry(Type.INVALID));
     Entry typePop = test.pop();
@@ -112,7 +113,7 @@ public class TestStack {
    * allows the creation of top() which compares the top value to the last value entry.
    */
   @Test
-  public void topTest() { // TEST 26 - top() test with float value.
+  public void topTest() { // TEST 9 - top() test with float value.
     Stack test = new Stack();
     test.push(new Entry(32.54f));
     Entry topVal = test.top();
